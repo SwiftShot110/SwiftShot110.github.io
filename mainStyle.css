@@ -69,7 +69,7 @@ header {
     margin-left:auto;
   }
   h2 {
-    background-color:#181818;
+    background-color:#111111;
     color: #AADAFA;
     border-color: #151515;
     width:140%;
@@ -90,7 +90,6 @@ header {
 /* Nav Bar */
 
 nav {
-    color: #CEB883;
     background-color: #181818;
     top: 20px;
     width: 100%;
@@ -104,14 +103,14 @@ nav {
     list-style-type: none;
     overflow: hidden;
     text-align: right;
-    background-color: white;
+    background-color: #181818;
   }
   .topnav ul li {
     display: inline;
   }
   .topnav ul li a {
     text-decoration: none;
-    color: #003366;
+    color: #CEB883;
     padding: 10px;
   }
   .topnav ul li a:hover {
