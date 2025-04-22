@@ -72,11 +72,10 @@ header {
     background-color:#181818;
     color: #AADAFA;
     border-color: #151515;
-    width:110%;
+    width:140%;
     padding-top:100px;
     padding-bottom:10px;
-    padding-left: 0pt;
-    padding-right: 0pt;
+    margin-left: -20%;
     text-align:center;
     clear: both;
   }
