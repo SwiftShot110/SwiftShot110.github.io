@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mine Sweeper - How to Play</title>
+        <link href="styles/mainStyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="sitename">CMSCI 256 Project - <em>Old Video Games</em></div>
+            <nav class="topnav">
+                <ul >
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main">
+            <h2>Mine Sweeper - How to Play</h2>
+            <p>The goal of Mine Sweeper is to find all the mines without blowing up.</p>
+            <ul>
+                <li>
+                    You find mines by "stepping" on a square.
+                    <ul>
+                        <li>
+                            If it is safe, it will clear and reveal how many of the adjacent 9 squares contain mines
+                            <br>
+                            <img src="images/MSsafe.png" alt="when the middle square was clicked on, it revealed a 1 indicating there is one mine adjacent, which must be the northeast cell.">
+                        </li>
+                        <li>
+                            If it is a mine, you lose.
+                            <br>
+                            <img src="images/MSdeath.png" alt="the mine in the center was selected so the player lost.">
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    You can mark a squares that you think have a mine with a flag.
+                </li>
+                <li>
+                    The first square you click on is always safe.
+                </li>
+                <li>
+                    If a square has no mines in its 9 adjacent squares, it will appear blank and all adjacent squares will be revealed.
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

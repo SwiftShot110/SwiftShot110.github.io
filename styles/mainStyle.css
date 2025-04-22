@@ -11,9 +11,10 @@ body {
     font-size: 14px;
     margin:0px;
     background-color:#1F1F1F;
+    color: #FFFFFF;
   }
 
-  main {
+  .main {
 	background-color:#1F1F1F;
 	margin:15px;
 	color:#fff;
@@ -24,6 +25,7 @@ p {
     padding-left:15px;
     padding-right:15px;
     padding-bottom:5px;
+    text-align: center;
   }
 
 /* headers */
@@ -72,10 +74,10 @@ header {
     background-color:#111111;
     color: #AADAFA;
     border-color: #151515;
-    width:140%;
+    width:120%;
     padding-top:100px;
     padding-bottom:10px;
-    margin-left: -20%;
+    margin-left: -10%;
     text-align:center;
     clear: both;
   }
@@ -110,14 +112,14 @@ nav {
   }
   .topnav ul li a {
     text-decoration: none;
-    color: #C1917A;
+    color: #d18a69;
     padding: 10px;
   }
   .topnav ul li a:hover {
     background-color: #BACDAB;
   }
   .topnav ul li a.active {
-    background-color: #BE8F79;
+    background-color: #D2BB85;
   }
   .icon {
     display: none;
