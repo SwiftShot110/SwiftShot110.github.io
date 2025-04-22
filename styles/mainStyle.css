@@ -14,21 +14,25 @@ body {
     color: #FFFFFF;
   }
 
-  .main {
+.main {
 	background-color:#1F1F1F;
 	margin:15px;
 	color:#fff;
 }
 
+.first-item {
+  margin-top: 110px;
+}
+
 .main p {
-    line-height:30px;
-    padding-left:15px;
-    padding-right:15px;
-    padding-bottom:5px;
-    margin-left: 15%;
-    margin-right: 15%;
-    text-align: center;
-  }
+  line-height:30px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom:5px;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: center;
+}
 
 /* headers */
 header {
@@ -65,6 +69,7 @@ header {
   #home-first {
     font-size:250%;
     border:6px outset #2B2B2B;
+    background-color: #1F1F1F;
     padding-top: 20px;
     padding:10px;
     color:#AADAFA;
@@ -78,10 +83,10 @@ header {
     background-color:#111111;
     color: #AADAFA;
     border-color: #151515;
-    width:120%;
+    width:110%;
     padding-top:10px;
     padding-bottom:10px;
-    margin-left: -10%;
+    margin-left: -5%;
     text-align:center;
     clear: both;
   }
@@ -139,12 +144,17 @@ nav {
     color: #CB76D0;
   }
 
+  #src {
+    text-align: left;
+  }
+
   #title-backsplash {
     height: auto;
     width: 110%;
     margin-left: -5%;
-    margin-top: 110px;
-    background-image: "images/backsplash.png";
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-image: URL('../images/backsplash.png');
   }
 
   @media screen and (max-width: 600px) {
