@@ -1,0 +1,177 @@
+/*
+    Author: Travis Cleveland
+    last updated: April 2025
+    inspired by: rlampy.github.io/main.css
+*/
+
+/* General */
+
+body {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    margin:0px;
+    background-color:#1F1F1F;
+    color: #FFFFFF;
+  }
+
+  .main {
+	background-color:#1F1F1F;
+	margin:15px;
+	color:#fff;
+}
+
+.main p {
+    line-height:30px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:5px;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+  }
+
+/* headers */
+header {
+    background-color: #181818;
+    width: 110%;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 20px;
+}
+.sitename {
+    position:fixed;
+    background-color: #181818;
+    width: 110%;
+    color:#F4D348;
+    font-weight:bolder;
+    font-size:larger;
+    padding: 15px;
+    z-index: 99;
+  }
+
+  h1 { 
+    position: relative;
+    z-index: -1;
+    background-color:#181818;
+    width:100%;
+    padding-top:140px;
+    padding-bottom:40px;
+    margin:1px;
+    text-align:center;
+    clear:both;
+    border-bottom: 10px solid #151515;
+  }
+  #home-first {
+    font-size:250%;
+    border:6px outset #2B2B2B;
+    padding-top: 20px;
+    padding:10px;
+    color:#AADAFA;
+    letter-spacing:2px;
+    width:fit-content;
+    margin-right:auto;
+    margin-left:auto;
+    z-index: 80;
+  }
+  h2 {
+    background-color:#111111;
+    color: #AADAFA;
+    border-color: #151515;
+    width:120%;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left: -10%;
+    text-align:center;
+    clear: both;
+  }
+  h3 {
+    font-size:150%;
+    padding:10px;
+    letter-spacing:2px;
+    margin-right:auto;
+    margin-left:auto;
+    text-align: center;
+  }
+
+/* Nav Bar */
+
+nav {
+    background-color: #181818;
+    top: 20px;
+    width: 100%;
+    margin-top:20px;
+    border-bottom: 10px solid #2B2B2B;
+    text-align:right;
+    position: fixed;
+    z-index: 99;
+  }
+  .topnav ul {
+    list-style-type: none;
+    overflow: hidden;
+    text-align: right;
+    background-color: #181818;
+  }
+  .topnav ul li {
+    display: inline;
+  }
+  .topnav ul li a {
+    text-decoration: none;
+    color: #d18a69;
+    padding: 10px;
+  }
+  .topnav ul li a:hover {
+    background-color: #BACDAB;
+  }
+  .topnav ul li a.active {
+    background-color: #D2BB85;
+  }
+  .icon {
+    display: none;
+    padding: 5px;
+    width: 50px;
+  }
+  /* other stuff */
+  footer {
+    padding:20px 50px 20px 50px;
+    text-align:right;
+    border-top:1px solid #2B2B2B;
+    color: #CB76D0;
+  }
+
+  #title-backsplash {
+    height: auto;
+    width: 110%;
+    margin-left: -5%;
+    margin-top: 110px;
+    background-image: "images/backsplash.png";
+  }
+
+  @media screen and (max-width: 600px) {
+    .topnav ul li {
+      display: block;
+      margin: 20px;
+      text-align: left;
+    }
+    #navlist {
+      display: none;
+    }
+    .icon {
+      display: block;
+      background-color:#ff9900;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
