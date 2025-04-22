@@ -39,7 +39,7 @@ header {
     position:fixed;
     background-color: #181818;
     width: 110%;
-    color:#C1917A;
+    color:#F4D348;
     font-weight:bolder;
     font-size:larger;
     padding: 15px;
@@ -110,14 +110,14 @@ nav {
   }
   .topnav ul li a {
     text-decoration: none;
-    color: #CEB883;
+    color: #C1917A;
     padding: 10px;
   }
   .topnav ul li a:hover {
-    background-color: #ddd;
+    background-color: #BACDAB;
   }
   .topnav ul li a.active {
-    background-color: #ff9900;
+    background-color: #BE8F79;
   }
   .icon {
     display: none;
