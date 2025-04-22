@@ -97,7 +97,7 @@ nav {
     border-bottom: 10px solid #2B2B2B;
     text-align:right;
     position: fixed;
-    z-index: 98;
+    z-index: 99;
   }
   .topnav ul {
     list-style-type: none;
