@@ -37,6 +37,8 @@ header {
 }
 .sitename {
     position:fixed;
+    background-color: #181818;
+    width: 110%;
     color:#C1917A;
     font-weight:bolder;
     font-size:larger;
@@ -70,10 +72,11 @@ header {
     background-color:#181818;
     color: #AADAFA;
     border-color: #151515;
-    width:90%;
+    width:110%;
     padding-top:100px;
     padding-bottom:10px;
-    margin:auto;
+    padding-left: 0pt;
+    padding-right: 0pt;
     text-align:center;
     clear: both;
   }
