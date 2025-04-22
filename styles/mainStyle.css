@@ -20,11 +20,13 @@ body {
 	color:#fff;
 }
 
-p {
+.main p {
     line-height:30px;
     padding-left:15px;
     padding-right:15px;
     padding-bottom:5px;
+    margin-left: 15%;
+    margin-right: 15%;
     text-align: center;
   }
 
@@ -60,22 +62,24 @@ header {
     clear:both;
     border-bottom: 10px solid #151515;
   }
-  .home-first {
+  #home-first {
     font-size:250%;
     border:6px outset #2B2B2B;
+    padding-top: 20px;
     padding:10px;
-    color:#A8D8F7;
+    color:#AADAFA;
     letter-spacing:2px;
     width:fit-content;
     margin-right:auto;
     margin-left:auto;
+    z-index: 80;
   }
   h2 {
     background-color:#111111;
     color: #AADAFA;
     border-color: #151515;
     width:120%;
-    padding-top:100px;
+    padding-top:10px;
     padding-bottom:10px;
     margin-left: -10%;
     text-align:center;
@@ -87,6 +91,7 @@ header {
     letter-spacing:2px;
     margin-right:auto;
     margin-left:auto;
+    text-align: center;
   }
 
 /* Nav Bar */
@@ -126,7 +131,22 @@ nav {
     padding: 5px;
     width: 50px;
   }
-  
+  /* other stuff */
+  footer {
+    padding:20px 50px 20px 50px;
+    text-align:right;
+    border-top:1px solid #2B2B2B;
+    color: #CB76D0;
+  }
+
+  #title-backsplash {
+    height: auto;
+    width: 110%;
+    margin-left: -5%;
+    margin-top: 110px;
+    background-image: "images/backsplash.png";
+  }
+
   @media screen and (max-width: 600px) {
     .topnav ul li {
       display: block;
