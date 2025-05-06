@@ -1,4 +1,7 @@
-
+/*
+Minesweeper code
+based on: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game/
+*/
 const numRows = 8;
 const numCols = 8;
 const numMines = 10;

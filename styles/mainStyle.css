@@ -100,7 +100,9 @@ header {
     text-align: center;
   }
 
-/* game stuff */
+/* game stuff 
+portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game/
+*/
 
 #game {
   border: 1pt solid antiquewhite;
@@ -127,6 +129,7 @@ header {
   border: 1px solid #ccc;
   display: inline-block;
   text-align: center;
+  padding: 5pt;
   vertical-align: middle;
   font-size: 20px;
   cursor: pointer;
@@ -140,7 +143,7 @@ header {
 .revealed {
   /* Color for revealed tiles */
   background-color: #ccc;
-
+  border: 1px solid #ccc;
   /* Color for revealed tile text */
   color: #000;
 }
