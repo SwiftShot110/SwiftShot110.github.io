@@ -149,9 +149,8 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   height: 30px;
   border: 1px solid #ccc;
   text-align: center;
-  padding-top: 10;
-  padding: 5pt;
-  margin: auto;
+  margin-top: 7px;
+  margin-inline: auto;
   vertical-align: middle;
   font-size: 20px;
   cursor: pointer;
