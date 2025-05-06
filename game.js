@@ -117,8 +117,9 @@ function renderBoard() {
                 cell.classList.add("noRev");
             }
             cell.addEventListener("click", () => revealCell(i, j));
-            cell.addEventListener("contextmenu", (e) => e.preventDefault());
-            cell.addEventListener("contextmenu", () => applyFlag(i,j))
+            if (started&&!done){
+                cell.addEventListener("contextmenu", (e) => e.preventDefault());
+                cell.addEventListener("contextmenu", () => applyFlag(i,j));}
             gameBoard.appendChild(cell);
         }
         gameBoard.appendChild(document.createElement("br"));
