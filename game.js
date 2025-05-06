@@ -2,9 +2,9 @@
 Minesweeper code
 based on: https://www.geeksforgeeks.org/create-a-minesweeper-game-using-html-css-javascript/
 */
-const numRows = 8;
-const numCols = 8;
-const numMines = 10;
+const numRows = 16;
+const numCols = 16;
+const numMines = 40;
 let started = false;
 let squares = (numCols*numRows)-numMines;
 let done = false;
