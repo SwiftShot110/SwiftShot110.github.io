@@ -88,7 +88,7 @@ function renderBoard() {
                 }
             }
             cell.addEventListener("click", () => revealCell(i, j));
-            cell.addEventListener("contextmenu", () => {alert('success!')})
+            cell.addEventListener("contextmenu", () => {alert('success!')});
             gameBoard.appendChild(cell);
         }
         gameBoard.appendChild(document.createElement("br"));
