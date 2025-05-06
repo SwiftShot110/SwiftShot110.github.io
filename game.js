@@ -190,6 +190,7 @@ function renderBoard() {
     btnReset.addEventListener("click", () => reset());
     gameBoard.appendChild(btnReset);   
     gameBoard.appendChild(document.createElement("br"));
+    const debug = document.createElement("div");
     debug.className = "reset";
     debug.textContent = "debug";
     debug.addEventListener("click", () => debugTrigger());
