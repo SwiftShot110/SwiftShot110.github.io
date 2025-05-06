@@ -99,18 +99,25 @@ header {
     text-align: center;
   }
 
+/* game stuff */
+
+.game {
+  border: 1pt solid antiquewhite;
+  border-radius: 10pt;
+}
+
 /* Nav Bar */
 
 nav {
-    background-color: #181818;
-    top: 20px;
-    width: 100%;
-    margin-top:20px;
-    border-bottom: 10px solid #2B2B2B;
-    text-align:right;
-    position: fixed;
-    z-index: 99;
-  }
+  background-color: #181818;
+  top: 20px;
+  width: 100%;
+  margin-top:20px;
+  border-bottom: 10px solid #2B2B2B;
+  text-align:right;
+  position: fixed;
+  z-index: 99;
+}
   .topnav ul {
     list-style-type: none;
     overflow: hidden;
@@ -147,6 +154,8 @@ nav {
   #src {
     text-align: left;
   }
+
+
 
   #title-backsplash {
     height: auto;
