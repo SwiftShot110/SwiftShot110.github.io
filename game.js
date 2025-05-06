@@ -82,7 +82,7 @@ function renderBoard() {
                 cell.classList.add("revealed");
                 if (board[i][j].isMine) {
                     cell.classList.add("mine");
-                    cell.textContent = "*";
+                    cell.textContent = "???";
                 } else if (board[i][j].count > 0) {
                     cell.textContent = board[i][j].count;
                 }
