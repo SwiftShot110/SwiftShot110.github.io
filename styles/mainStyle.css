@@ -165,10 +165,14 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   cursor: pointer;
 }
 
+.missedMine{
+  background-color: #303030;
+  color: #999999;
+}
+
 .noRev {
   /* Default color for unrevealed tiles */
   background-color: #303030;
-  color: #999999;
 }
 
 .mine {
