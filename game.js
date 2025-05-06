@@ -69,6 +69,7 @@ function revealCell(row, col) {
     }
     }
     board[row][col].revealed = true;
+    squares--;
     if (board[row][col].isMine) {
         // Handle game over
         done=true;
