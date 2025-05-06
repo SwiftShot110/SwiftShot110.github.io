@@ -145,11 +145,6 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   cursor: pointer;
 }
 
-#game br {
-  padding: 0%;
-  margin: 0%;
-}
-
 .foundMine {
   background-color: green;
 }
@@ -174,6 +169,7 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
 .noRev {
   /* Default color for unrevealed tiles */
   background-color: #303030;
+  color: #999999;
 }
 
 .mine {
