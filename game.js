@@ -25,7 +25,33 @@ function initializeBoard() {
     }
 
     
-    // Calculate counts
+    
+}
+
+function revealCell(row, col) {
+    if (
+        row < 0 ||
+        row >= numRows ||
+        col < 0 ||
+        col >= numCols ||
+        board[row][col].revealed
+    ) {
+        return;
+    }
+
+    board[row][col].revealed = true;
+    if (started){
+        // Place mines randomly
+        let minesPlaced = 0;
+        while (minesPlaced < numMines) {
+            const rowM = Math.floor(Math.random() * numRows);
+            const colM = Math.floor(Math.random() * numCols);
+            if (!(board[rowM][colM].isMine||((col-1<colM&&col+1>colM)&&(row-1<rowM&&row+1>rowM)))) {
+                board[rowM][colM].isMine = true;
+                minesPlaced++;
+            }
+        }
+        // Calculate counts
     for (let i = 0; i < numRows; i++) {
         for (
             let j = 0;
@@ -68,31 +94,6 @@ function initializeBoard() {
             }
         }
     }
-}
-
-function revealCell(row, col) {
-    if (
-        row < 0 ||
-        row >= numRows ||
-        col < 0 ||
-        col >= numCols ||
-        board[row][col].revealed
-    ) {
-        return;
-    }
-
-    board[row][col].revealed = true;
-    if (started){
-        // Place mines randomly
-        let minesPlaced = 0;
-        while (minesPlaced < numMines) {
-            const rowM = Math.floor(Math.random() * numRows);
-            const colM = Math.floor(Math.random() * numCols);
-            if (!(board[rowM][colM].isMine||((col-1<colM&&col+1>colM)&&(row-1<rowM&&row+1>rowM)))) {
-                board[rowM][colM].isMine = true;
-                minesPlaced++;
-            }
-        }
     }
     if (board[row][col].isMine) {
         // Handle game over
