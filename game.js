@@ -25,7 +25,7 @@ function revealCell(row, col) {
     if ((done&&started)||(row < 0 || row >= numRows || col < 0 || col >= numCols || board[row][col].revealed)) {
         return;
     }
-    if (flag){
+    if (board[row][col].flag){
         board[row][col].flag = false;
     }else{
 
