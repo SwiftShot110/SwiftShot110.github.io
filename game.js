@@ -82,9 +82,12 @@ function revealCell(row, col) {
         }
     }
     }
-    renderBoard();
+    
     if (done) {
         alert("Game Over! You stepped on a mine.");
+        endRender();
+    } else {
+        renderBoard();
     }
     if (squares<=0){
         alert("You win!");
@@ -95,6 +98,54 @@ function revealCell(row, col) {
 function applyFlag(row,col,e){
     board[row][col].flag=!board[row][col].flag;
     renderBoard();
+}
+
+function endRender() {
+    gameBoard.innerHTML = "";
+
+    for (let i = 0; i < numRows; i++) {
+        for (let j = 0; j < numCols; j++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            if (board[i][j].revealed) {
+                cell.classList.add("revealed");
+                if (board[i][j].isMine) {
+                    cell.classList.add("mine");
+                    cell.textContent = "*";
+                } else if (board[i][j].count > 0) {
+                    cell.textContent = board[i][j].count;
+                }
+            } else if (board[i][j].flag){
+                cell.classList.add("noRev");
+                cell.classList.add("flagged");
+                cell.textContent = "F";
+            } else {
+                if(board[i][j].isMine){
+                    if(board[i][j].flag){
+                        cell.classList.add("foundMine");
+                        cell.textContent = "*";
+                    }else{
+                        cell.classList.add("noRev");
+                        cell.textContent= "*";
+                    }
+                } else{
+                    if(board[i][j].flag){
+                        cell.classList.add("falseFlag");
+                        cell.textContent = "F";
+                    }else{
+                        cell.classList.add("noRev");
+                    }
+                }
+            }
+            gameBoard.appendChild(cell);
+        }
+        gameBoard.appendChild(document.createElement("br"));
+    }
+    const btnReset = document.createElement("div");
+    btnReset.className = "reset";
+    btnReset.textContent = "Reset";
+    btnReset.addEventListener("click", () => reset());
+    gameBoard.appendChild(btnReset);   
 }
 
 function renderBoard() {
@@ -120,7 +171,7 @@ function renderBoard() {
                 cell.classList.add("noRev");
             }
             cell.addEventListener("click", () => revealCell(i, j));
-            if (started&&!done){
+            if (started){
                 cell.addEventListener("contextmenu", (e) => e.preventDefault());
                 cell.addEventListener("contextmenu", () => applyFlag(i,j));}
             gameBoard.appendChild(cell);

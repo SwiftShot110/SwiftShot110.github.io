@@ -144,6 +144,15 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   cursor: pointer;
 }
 
+.foundMine {
+  background-color: green;
+}
+
+.falseFlag {
+  background-color: #303030;
+  color: red;
+}
+
 .reset{
   width: 70px;
   height: 30px;
