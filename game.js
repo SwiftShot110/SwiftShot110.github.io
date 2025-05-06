@@ -147,7 +147,7 @@ function endRender() {
     debug.className = "reset";
     debug.textContent = "debug";
     debug.addEventListener("click", () => debugTrigger());
-    gameBoard.appendChild(debug)
+    gameBoard.appendChild(debug);
 }
 
 function debugTrigger() {
@@ -189,6 +189,11 @@ function renderBoard() {
     btnReset.textContent = "Reset";
     btnReset.addEventListener("click", () => reset());
     gameBoard.appendChild(btnReset);   
+    gameBoard.appendChild(document.createElement("br"));
+    debug.className = "reset";
+    debug.textContent = "debug";
+    debug.addEventListener("click", () => debugTrigger());
+    gameBoard.appendChild(debug);
 }
 
 initializeBoard();
