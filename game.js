@@ -82,12 +82,13 @@ function renderBoard() {
                 cell.classList.add("revealed");
                 if (board[i][j].isMine) {
                     cell.classList.add("mine");
-                    cell.textContent = "????";
+                    cell.textContent = "*";
                 } else if (board[i][j].count > 0) {
                     cell.textContent = board[i][j].count;
                 }
             }
             cell.addEventListener("click", () => revealCell(i, j));
+            cell.addEventListener("rclick", () => {alert('success!')})
             gameBoard.appendChild(cell);
         }
         gameBoard.appendChild(document.createElement("br"));
