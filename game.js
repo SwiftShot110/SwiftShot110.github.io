@@ -81,6 +81,11 @@ function revealCell(row, col) {
     }
 }
 
+function applyFlag(row,col){
+    board[row][col].flag=!board[row][col].flag;
+    renderBoard();
+}
+
 function renderBoard() {
     gameBoard.innerHTML = "";
 
@@ -101,7 +106,7 @@ function renderBoard() {
                 }
             }
             cell.addEventListener("click", () => revealCell(i, j));
-            cell.addEventListener("contextmenu", (e) => {e.preventDefault(); applyFlag()});
+            cell.addEventListener("contextmenu", (e) => {e.preventDefault(); applyFlag(i,j)});
             gameBoard.appendChild(cell);
         }
         gameBoard.appendChild(document.createElement("br"));
