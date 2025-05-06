@@ -66,10 +66,12 @@ header {
     clear:both;
     border-bottom: 10px solid #151515;
   }
+  
   #home-first {
+    font-size:250%;
     border:6px outset #2B2B2B;
     background-color: #1F1F1F;
-    padding-top: 200px;
+    /*padding-top: 20px;*/
     padding:10px;
     color:#AADAFA;
     letter-spacing:2px;
@@ -103,6 +105,17 @@ header {
 #game {
   border: 1pt solid antiquewhite;
   border-radius: 10pt;
+  z-index: 89;
+  font-size:250%;
+  border:6px outset #2B2B2B;
+  background-color: #1F1F1F;
+  padding:10px;
+  color:#AADAFA;
+  letter-spacing:2px;
+  width:fit-content;
+  margin-right:auto;
+  margin-left:auto;
+  z-index: 80;
 }
 .board {
   display: inline-block;
@@ -119,10 +132,10 @@ header {
   cursor: pointer;
 
   /* Default color for unrevealed tiles */
-  background-color: #eee;
+  background-color: #333333;
 
   /* Default color for unrevealed tile text */
-  color: #333;
+  color: #eee;
 }
 .revealed {
   /* Color for revealed tiles */
