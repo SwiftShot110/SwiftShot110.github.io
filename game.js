@@ -4,9 +4,7 @@ const numCols = 8;
 const numMines = 10;
 
 const gameBoard =
-    document.getElementById(
-        "gameBoard"
-    );
+    document.getElementById("game");
 let board = [];
 
 function initializeBoard() {
