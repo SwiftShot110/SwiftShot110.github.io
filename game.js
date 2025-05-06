@@ -102,6 +102,7 @@ function renderBoard() {
                     cell.textContent = board[i][j].count;
                 }
             } else if (board[i][j].flag){
+                cell.classList.add("flagged");
                 cell.textContent = "F";
             }
             cell.addEventListener("click", () => revealCell(i, j));
