@@ -103,7 +103,10 @@ function renderBoard() {
                 }
             } else if (board[i][j].flag){
                 cell.classList.add("flagged");
+                cell.classList.add("noRev");
                 cell.textContent = "F";
+            } else {
+                cell.classList.add("noRev");
             }
             cell.addEventListener("click", () => revealCell(i, j));
             cell.addEventListener("contextmenu", (e) => e.preventDefault());

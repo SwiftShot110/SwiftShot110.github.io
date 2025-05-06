@@ -128,8 +128,7 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
 }
 .revealed {
   /* Color for revealed tiles */
-  background-color: #5d5d5d;
-  border: 1px solid #ccc;
+  background-color: #626262;
   /* Color for revealed tile text */
   color: #000;
 }
@@ -143,9 +142,11 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   vertical-align: middle;
   font-size: 20px;
   cursor: pointer;
+}
 
+.noRev {
   /* Default color for unrevealed tiles */
-  background-color: #333333;
+  background-color: #303030;
 
   /* Default color for unrevealed tile text */
   color: #eee;
