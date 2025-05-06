@@ -119,6 +119,9 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   margin-left:auto;
   z-index: 80;
 }
+.flagged {
+  color: green;
+}
 .board {
   display: inline-block;
   margin: 20px;
