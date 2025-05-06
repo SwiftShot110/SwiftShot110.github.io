@@ -142,7 +142,7 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
 }
 .revealed {
   /* Color for revealed tiles */
-  background-color: #ccc;
+  background-color: #5d5d5d;
   border: 1px solid #ccc;
   /* Color for revealed tile text */
   color: #000;
