@@ -124,7 +124,8 @@ function renderBoard() {
         gameBoard.appendChild(document.createElement("br"));
     }
     const btnReset = document.createElement("div");
-    btnReset.className = "cell";
+    btnReset.className = "reset";
+    btnReset.textContent = "Reset";
     btnReset.addEventListener("click", () => reset());
     gameBoard.appendChild(btnReset);   
 }
