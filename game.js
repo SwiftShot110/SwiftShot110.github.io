@@ -2,6 +2,7 @@
 const numRows = 8;
 const numCols = 8;
 const numMines = 10;
+let started = false;
 
 const gameBoard =
     document.getElementById("game");
@@ -23,23 +24,7 @@ function initializeBoard() {
         }
     }
 
-    // Place mines randomly
-    let minesPlaced = 0;
-    while (minesPlaced < numMines) {
-        const row = Math.floor(
-            Math.random() * numRows
-        );
-        const col = Math.floor(
-            Math.random() * numCols
-        );
-        if (!board[row][col].isMine) {
-            board[row][
-                col
-            ].isMine = true;
-            minesPlaced++;
-        }
-    }
-
+    
     // Calculate counts
     for (let i = 0; i < numRows; i++) {
         for (
@@ -97,7 +82,18 @@ function revealCell(row, col) {
     }
 
     board[row][col].revealed = true;
-
+    if (started){
+        // Place mines randomly
+        let minesPlaced = 0;
+        while (minesPlaced < numMines) {
+            const rowM = Math.floor(Math.random() * numRows);
+            const colM = Math.floor(Math.random() * numCols);
+            if (!(board[rowM][colM].isMine||((col-1>colM&&col+1<colM)&&(row-1>rowM&&row+1<rowM)))) {
+                board[rowM][colM].isMine = true;
+                minesPlaced++;
+            }
+        }
+    }
     if (board[row][col].isMine) {
         // Handle game over
         alert(
