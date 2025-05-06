@@ -133,8 +133,8 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   color: #000;
 }
 .cell {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border: 1px solid #ccc;
   display: inline-block;
   text-align: center;
