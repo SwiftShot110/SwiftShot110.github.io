@@ -115,10 +115,6 @@ function endRender() {
                 } else if (board[i][j].count > 0) {
                     cell.textContent = board[i][j].count;
                 }
-            } else if (board[i][j].flag){
-                cell.classList.add("noRev");
-                cell.classList.add("flagged");
-                cell.textContent = "F";
             } else {
                 if(board[i][j].isMine){
                     if(board[i][j].flag){
