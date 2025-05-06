@@ -144,12 +144,13 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   cursor: pointer;
 }
 
+.noFlag {
+  color: #ccc
+}
+
 .noRev {
   /* Default color for unrevealed tiles */
   background-color: #303030;
-
-  /* Default color for unrevealed tile text */
-  color: #eee;
 }
 
 .mine {

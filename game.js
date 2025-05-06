@@ -110,8 +110,8 @@ function renderBoard() {
                     cell.textContent = board[i][j].count;
                 }
             } else if (board[i][j].flag){
-                cell.classList.add("flagged");
                 cell.classList.add("noRev");
+                cell.classList.add("flagged");
                 cell.textContent = "F";
             } else {
                 cell.classList.add("noRev");
