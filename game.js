@@ -22,7 +22,7 @@ function initializeBoard() {
 }
 
 function revealCell(row, col) {
-    if ((done)||(row < 0 || row >= numRows || col < 0 || col >= numCols || board[row][col].revealed)) {
+    if ((done&&started)||(row < 0 || row >= numRows || col < 0 || col >= numCols || board[row][col].revealed)) {
         return;
     }
     if (flag){
