@@ -101,9 +101,40 @@ header {
 
 /* game stuff */
 
-.game {
+#game {
   border: 1pt solid antiquewhite;
   border-radius: 10pt;
+}
+.board {
+  display: inline-block;
+  margin: 20px;
+}
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  cursor: pointer;
+
+  /* Default color for unrevealed tiles */
+  background-color: #eee;
+
+  /* Default color for unrevealed tile text */
+  color: #333;
+}
+.revealed {
+  /* Color for revealed tiles */
+  background-color: #ccc;
+
+  /* Color for revealed tile text */
+  color: #000;
+}
+.mine {
+  /* Color for mines */
+  background-color: #ff3333;
 }
 
 /* Nav Bar */
