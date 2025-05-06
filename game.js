@@ -6,6 +6,8 @@ const numRows = 8;
 const numCols = 8;
 const numMines = 10;
 let started = false;
+let squares = (numCols*numRows)-numMines;
+let done = false;
 
 const gameBoard = document.getElementById("game");
 let board = [];
@@ -20,7 +22,7 @@ function initializeBoard() {
 }
 
 function revealCell(row, col) {
-    if (row < 0 || row >= numRows || col < 0 || col >= numCols || board[row][col].revealed) {
+    if ((done)||(row < 0 || row >= numRows || col < 0 || col >= numCols || board[row][col].revealed)) {
         return;
     }
     if (flag){
@@ -62,6 +64,7 @@ function revealCell(row, col) {
     if (board[row][col].isMine) {
         // Handle game over
         alert("Game Over! You stepped on a mine.");
+        done=true;
     } else if (board[row][col].count === 0) {
         // If cell has no mines nearby,
         // Reveal adjacent cells
@@ -72,6 +75,10 @@ function revealCell(row, col) {
     }
     }
     renderBoard();
+    if (squares<=0){
+        alert("You win!");
+        done=true;
+    }
 }
 
 function renderBoard() {
