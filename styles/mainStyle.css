@@ -130,7 +130,7 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   /* Color for revealed tile text */
   color: #000;
 }
-.board .cell {
+.cell {
   width: 30px;
   height: 30px;
   border: 1px solid #ccc;
