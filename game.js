@@ -21,6 +21,14 @@ function initializeBoard() {
     }
 }
 
+function reset() {
+    started = false;
+    squares = (numCols*numRows)-numMines;
+    done = false;
+    initializeBoard();
+    renderBoard();
+}
+
 function revealCell(row, col) {
     if ((done&&started)||(row < 0 || row >= numRows || col < 0 || col >= numCols || board[row][col].revealed)) {
         return;
@@ -115,6 +123,10 @@ function renderBoard() {
         }
         gameBoard.appendChild(document.createElement("br"));
     }
+    const btnReset = document.createElement("div");
+    btnReset.className = "cell";
+    btnReset.addEventListener("click", () => reset());
+    gameBoard.appendChild(btnReset);   
 }
 
 initializeBoard();
