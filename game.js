@@ -29,7 +29,7 @@ function revealCell(row, col) {
         while (minesPlaced < numMines) {
             const rowM = Math.floor(Math.random() * numRows);
             const colM = Math.floor(Math.random() * numCols);
-            if ((board[rowM][colM].isMine)||((col-1<=colM)&&(col+1>=colM))||((row-1<=rowM)&&(row+1>=rowM))) {
+            if (!((board[rowM][colM].isMine)||(((col-1<=colM)&&(col+1>=colM))&&((row-1<=rowM)&&(row+1>=rowM))))) {
                 board[rowM][colM].isMine = true;
                 minesPlaced++;
             }
