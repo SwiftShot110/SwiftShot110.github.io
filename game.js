@@ -41,6 +41,7 @@ function revealCell(row, col) {
 
     board[row][col].revealed = true;
     if (started){
+        started = true;
         // Place mines randomly
         let minesPlaced = 0;
         while (minesPlaced < numMines) {
@@ -53,73 +54,31 @@ function revealCell(row, col) {
         }
         // Calculate counts
     for (let i = 0; i < numRows; i++) {
-        for (
-            let j = 0;
-            j < numCols;
-            j++
-        ) {
+        for (let j = 0;j < numCols;j++) {
             if (!board[i][j].isMine) {
                 let count = 0;
-                for (
-                    let dx = -1;
-                    dx <= 1;
-                    dx++
-                ) {
-                    for (
-                        let dy = -1;
-                        dy <= 1;
-                        dy++
-                    ) {
-                        const ni =
-                            i + dx;
-                        const nj =
-                            j + dy;
-                        if (
-                            ni >= 0 &&
-                            ni <
-                                numRows &&
-                            nj >= 0 &&
-                            nj <
-                                numCols &&
-                            board[ni][
-                                nj
-                            ].isMine
-                        ) {
+                for (let dx = -1; dx <= 1; dx++) {
+                    for (let dy = -1;dy <= 1;dy++) {
+                        const ni = i + dx;
+                        const nj = j + dy;
+                        if (ni >= 0 && ni < numRows && nj >= 0 && nj < numCols && board[ni][nj].isMine)
                             count++;
-                        }
                     }
                 }
-                board[i][j].count =
-                    count;
+                board[i][j].count = count;
             }
         }
     }
     }
     if (board[row][col].isMine) {
         // Handle game over
-        alert(
-            "Game Over! You stepped on a mine."
-        );
-    } else if (
-        board[row][col].count === 0
-    ) {
+        alert("Game Over! You stepped on a mine.");
+    } else if (board[row][col].count === 0) {
         // If cell has no mines nearby,
         // Reveal adjacent cells
-        for (
-            let dx = -1;
-            dx <= 1;
-            dx++
-        ) {
-            for (
-                let dy = -1;
-                dy <= 1;
-                dy++
-            ) {
-                revealCell(
-                    row + dx,
-                    col + dy
-                );
-            }
+        for (let dx = -1; dx <= 1; dx++) {
+            for (let dy = -1; dy <= 1; dy++)
+                revealCell(row + dx, col + dy);
         }
     }
 
