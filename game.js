@@ -14,7 +14,7 @@ function initializeBoard() {
     for (let i = 0; i < numRows; i++) {
         board[i] = [];
         for (let j = 0; j < numCols; j++) {
-            board[i][j] = {isMine: false, revealed: false, count: 0};
+            board[i][j] = {isMine: false, revealed: false, count: 0, flag: false};
         }
     }
 }
@@ -23,6 +23,9 @@ function revealCell(row, col) {
     if (row < 0 || row >= numRows || col < 0 || col >= numCols || board[row][col].revealed) {
         return;
     }
+    if (flag){
+        board[row][col].flag = false;
+    }else{
 
     
     if (!started){
@@ -67,7 +70,7 @@ function revealCell(row, col) {
                 revealCell(row + dx, col + dy);}
         }
     }
-
+    }
     renderBoard();
 }
 
@@ -82,13 +85,16 @@ function renderBoard() {
                 cell.classList.add("revealed");
                 if (board[i][j].isMine) {
                     cell.classList.add("mine");
-                    cell.textContent = "???";
+                    cell.textContent = "*";
                 } else if (board[i][j].count > 0) {
                     cell.textContent = board[i][j].count;
+                    if (board[i][j].flag){
+                        cell.textContent = "F";
+                    }
                 }
             }
             cell.addEventListener("click", () => revealCell(i, j));
-            cell.addEventListener("contextmenu", () => {alert('success!')});
+            cell.addEventListener("contextmenu", (e) => {e.preventDefault(); applyFlag()});
             gameBoard.appendChild(cell);
         }
         gameBoard.appendChild(document.createElement("br"));
