@@ -144,10 +144,6 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
   cursor: pointer;
 }
 
-.noFlag {
-  color: #ccc
-}
-
 .reset{
   width: 70px;
   height: 30px;

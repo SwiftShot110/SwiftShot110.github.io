@@ -71,7 +71,6 @@ function revealCell(row, col) {
     board[row][col].revealed = true;
     if (board[row][col].isMine) {
         // Handle game over
-        alert("Game Over! You stepped on a mine.");
         done=true;
     } else if (board[row][col].count === 0) {
         // If cell has no mines nearby,
@@ -83,6 +82,9 @@ function revealCell(row, col) {
     }
     }
     renderBoard();
+    if (done) {
+        alert("Game Over! You stepped on a mine.");
+    }
     if (squares<=0){
         alert("You win!");
         done=true;
