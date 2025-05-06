@@ -135,6 +135,7 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
 .cell {
   width: 20px;
   height: 20px;
+  margin-top: 0px;
   border: 1px solid #ccc;
   display: inline-block;
   text-align: center;
