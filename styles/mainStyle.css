@@ -149,11 +149,12 @@ portions from: https://www.geeksforgeeks.org/cpp-implementation-minesweeper-game
 }
 
 .reset{
-  width: 30px;
+  width: 70px;
   height: 30px;
   border: 1px solid #ccc;
   text-align: center;
   padding: 5pt;
+  margin: auto;
   vertical-align: middle;
   font-size: 20px;
   cursor: pointer;
