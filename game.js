@@ -83,7 +83,6 @@ function revealCell(row, col) {
 
 function applyFlag(row,col,e){
     board[row][col].flag=!board[row][col].flag;
-    alert(board[row][col].flag);
     renderBoard();
 }
 
@@ -101,10 +100,9 @@ function renderBoard() {
                     cell.textContent = "*";
                 } else if (board[i][j].count > 0) {
                     cell.textContent = board[i][j].count;
-                    if (board[i][j].flag){
-                        cell.textContent = "F";
-                    }
                 }
+            } else if (board[i][j].flag){
+                cell.textContent = "F";
             }
             cell.addEventListener("click", () => revealCell(i, j));
             cell.addEventListener("contextmenu", (e) => e.preventDefault());
